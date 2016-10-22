@@ -13,6 +13,8 @@ ArduinoUno::~ArduinoUno()
 {
 	delete _magUpdate;
 	delete _tester;
+	delete _altUpdate;
+
 }
 
 
@@ -25,15 +27,23 @@ void ArduinoUno::begin()
 		Serial.print("No BNO detected...");
 		while (1); //performs if check again.
 	}
+	//start up the BMP180..
+	if (!_bmpSensor.begin())
+	{
+		Serial.print("No BMP detected...");
+		while (1); //performs if check again.
+	}
 	delay(1000);
 	_bnoSensor.setExtCrystalUse(true);
 
 
-	//create our magnetometer update action
+	//create our magnetometer update action and add magnetometer update action to the 1second event.
 	_magUpdate = new MagnetometerUpdate(_bnoSensor);
-
-	//add magnetometer update action to the 1second event.
 	EventHandler::instance().add_eventAction("1s", _magUpdate);
+
+	//create our altitude update action and add altitude update action to the 1second event.
+	_altUpdate = new AltitudeUpdate(_bmpSensor);
+	EventHandler::instance().add_eventAction("1s", _altUpdate);
 
 	//create our magnetometer testing action
 	_tester = new TestingTesting();
@@ -41,5 +51,5 @@ void ArduinoUno::begin()
 	//add our magnetometer testing action to the "MagUpdate" event
 	// (the "MagUpdate" event was created by the MagnetometerUpdate 
 	// action when it was created)
-	EventHandler::instance().add_eventAction("MagUpdate", _tester);
+	EventHandler::instance().add_eventAction("AltUpdate", _tester);
 }

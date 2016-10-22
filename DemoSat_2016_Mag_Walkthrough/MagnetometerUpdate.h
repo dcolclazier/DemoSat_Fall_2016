@@ -1,10 +1,9 @@
 ﻿#pragma once
 #include <Adafruit_BNO055.h>
 #include "EventAction.h"
+#include "Time.h"
 
-//Event Action that updates the BNO055 magnetometer... also triggers
-// an event, "MagUpdate", which allows other actions to retreive the 
-// updated data (for logging)
+
 class MagnetometerUpdate : public EventAction
 {
 public:

@@ -1,3 +1,5 @@
+
+
 #include "EventData.h"
 
 //A container to hold time data... we use "byte" here because we don't need 
@@ -10,6 +12,7 @@ struct Time : EventData
 	byte Seconds;
 	byte Tenths;
 	byte Hundredths;
+	byte Days;
 
 	Time(): Hours(0), Minutes(0), Seconds(0), Tenths(0), Hundredths(0)
 	{

@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Arduino\libraries\Adafruit_Sensor;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055\utility;C:\Program Files (x86)\Arduino\libraries\Adafruit_Sensor\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\david\Desktop\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard;D:\OneDrive - JDC Network Solutions; LLC\Documents\Coding - All\DemoSat_2016_Mag_Walkthrough\DemoSat_2016_Mag_Walkthrough;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard;C:\Program Files (x86)\Arduino\libraries\Adafruit_Sensor;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\5ydcsvnd.3xd\Micro Platforms\default\debuggers\VM_DBG;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\5ydcsvnd.3xd\Micro Platforms\default\debuggers;C:\Users\david\Desktop\Arduino\libraries;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055\utility;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Arduino\libraries\Adafruit_BMP085_Unified;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files (x86)\Arduino\libraries\Adafruit_Sensor;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055;C:\Program Files (x86)\Arduino\libraries\Adafruit_BMP085_Unified\utility;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055\utility;C:\Program Files (x86)\Arduino\libraries\Adafruit_Sensor\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Users\david\Desktop\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard;D:\OneDrive - JDC Network Solutions; LLC\Documents\Coding - All\DemoSat_2016_Mag_Walkthrough\DemoSat_2016_Mag_Walkthrough;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard;C:\Program Files (x86)\Arduino\libraries\Adafruit_BMP085_Unified;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files (x86)\Arduino\libraries\Adafruit_Sensor;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\5ydcsvnd.3xd\Micro Platforms\default\debuggers\VM_DBG;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\5ydcsvnd.3xd\Micro Platforms\default\debuggers;C:\Users\david\Desktop\Arduino\libraries;C:\Program Files (x86)\Arduino\libraries\Adafruit_BNO055\utility;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>D:\OneDrive - JDC Network Solutions; LLC\Documents\Coding - All\DemoSat_2016_Mag_Walkthrough\DemoSat_2016_Mag_Walkthrough\__vm\.DemoSat_2016_Mag_Walkthrough.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10609;ARDUINO_AVR_UNO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -82,7 +82,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AltitudeUpdate.h" />
     <ClInclude Include="ArduinoUno.h" />
+    <ClInclude Include="BMPAltData.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventAction.h" />
     <ClInclude Include="EventData.h" />
@@ -95,6 +97,7 @@
     <ClInclude Include="__vm\.DemoSat_2016_Mag_Walkthrough.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AltitudeUpdate.cpp" />
     <ClCompile Include="ArduinoUno.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventHandler.cpp" />

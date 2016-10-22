@@ -1,6 +1,7 @@
 ﻿#include "TestingTesting.h"
 #include "BNOMagData.h"
 #include "Arduino.h"
+#include "BMPAltData.h"
 
 void TestingTesting::execute(EventData* data)
 {
@@ -10,20 +11,14 @@ void TestingTesting::execute(EventData* data)
 	//Since we know the TestingTesting action responds to the "MagUpdate" event and none other, we
 	//can guarantee that the EventData pointer points to BNOMagData (MagnetometerUpdate.cpp, line 20)
 	//So we convert the EventData pointer to a BNOMagData pointer, so we can reach in and access the data inside.
-	auto magData = static_cast<BNOMagData*>(data);
+	auto altitudeData = static_cast<BMPAltData*>(data);
 
 	//If for some reason something went wrong and magData returned null, get out of here! This should never happen.
-	if (!magData) return;
+	if (!altitudeData) return;
 
 	//reach into the magData and print it to the serial window.
-	Serial.print("X: ");
-	Serial.print(magData->x);
-	Serial.print("\tY: ");
-	Serial.print(magData->y);
-	Serial.print("\tZ: ");
-	Serial.print(magData->z);
-	Serial.print("\tTemp: ");
+	Serial.print("Altitude: ");
+	Serial.println(altitudeData->altitude);
 	
-	//notice this last line is "println" so we go to a new line before printing the next execution's data.
-	Serial.println(magData->temp);
+	
 }

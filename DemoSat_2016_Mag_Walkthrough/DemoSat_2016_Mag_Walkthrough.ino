@@ -1,3 +1,4 @@
+#include <Adafruit_BMP085_U.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
 #include "Arduino.h"
@@ -31,6 +32,7 @@ Time RunTime;
 
 // the loop function runs over and over again until power down or reset
 void loop() {
+
 	int currentTime = millis() / 100; // .1 seconds
 	if (currentTime - _prevTime < 1) return; //only run loop every .1s
 	
@@ -52,7 +54,6 @@ void loop() {
 				RunTime.Hours++;
 			}
 		}
-		
 	}
 	//how long the loop took to run
 	int loopExecutionTime = millis() / 100 - currentTime; 

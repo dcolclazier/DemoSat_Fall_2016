@@ -54,11 +54,17 @@
     <ClInclude Include="Time.h">
       <Filter>EventData</Filter>
     </ClInclude>
-    <ClInclude Include="TestingTesting.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BNOMagData.h">
       <Filter>EventData</Filter>
+    </ClInclude>
+    <ClInclude Include="BMPAltData.h">
+      <Filter>EventData</Filter>
+    </ClInclude>
+    <ClInclude Include="AltitudeUpdate.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="TestingTesting.h">
+      <Filter>Actions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -74,8 +80,11 @@
     <ClCompile Include="Event.cpp">
       <Filter>EventHandler</Filter>
     </ClCompile>
+    <ClCompile Include="AltitudeUpdate.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
     <ClCompile Include="TestingTesting.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Actions</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
