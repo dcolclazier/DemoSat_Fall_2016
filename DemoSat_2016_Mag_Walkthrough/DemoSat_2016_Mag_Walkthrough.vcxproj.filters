@@ -36,9 +36,6 @@
     <ClInclude Include="ArduinoUno.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MagnetometerUpdate.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
     <ClInclude Include="EventHandler.h">
       <Filter>EventHandler</Filter>
     </ClInclude>
@@ -54,25 +51,34 @@
     <ClInclude Include="Time.h">
       <Filter>EventData</Filter>
     </ClInclude>
-    <ClInclude Include="BNOMagData.h">
-      <Filter>EventData</Filter>
-    </ClInclude>
     <ClInclude Include="BMPAltData.h">
       <Filter>EventData</Filter>
     </ClInclude>
     <ClInclude Include="AltitudeUpdate.h">
       <Filter>Actions</Filter>
     </ClInclude>
-    <ClInclude Include="TestingTesting.h">
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BNOData.h">
+      <Filter>EventData</Filter>
+    </ClInclude>
+    <ClInclude Include="BNO100Update.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="LogBNOData.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="LogBMPData.h">
       <Filter>Actions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArduinoUno.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MagnetometerUpdate.cpp">
-      <Filter>Actions</Filter>
     </ClCompile>
     <ClCompile Include="EventHandler.cpp">
       <Filter>EventHandler</Filter>
@@ -83,7 +89,16 @@
     <ClCompile Include="AltitudeUpdate.cpp">
       <Filter>Actions</Filter>
     </ClCompile>
-    <ClCompile Include="TestingTesting.cpp">
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BNO100Update.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="LogBMPData.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="LogBNOData.cpp">
       <Filter>Actions</Filter>
     </ClCompile>
   </ItemGroup>

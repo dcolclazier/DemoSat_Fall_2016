@@ -2,6 +2,7 @@
 #include "EventHandler.h"
 #include "BMPAltData.h"
 #include <Adafruit_BMP085_U.h>
+#include "BNOData.h"
 
 AltitudeUpdate::AltitudeUpdate(const Adafruit_BMP085_Unified& bmp) :_bmp(bmp)
 {
@@ -16,8 +17,7 @@ void AltitudeUpdate::execute(EventData* data)
 	//Ensure that this is correct for your location
 	auto seaLevelPressure = 1014.8500326800001;
 	auto pressure = 0.0f;
-
-
+	
 	auto altData = BMPAltData();
 	//This pulls the pressure value
 	_bmp.getPressure(&pressure);
@@ -28,3 +28,5 @@ void AltitudeUpdate::execute(EventData* data)
 	//Trigger the event AltUpdate so that other things can act accordingly (like logging the data)
 	EventHandler::instance().trigger("AltUpdate", &altData);
 }
+
+

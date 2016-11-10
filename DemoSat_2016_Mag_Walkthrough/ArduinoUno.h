@@ -2,8 +2,11 @@
 #include <Adafruit_BMP085_U.h>
 #include <Adafruit_BNO055.h>
 #include "AltitudeUpdate.h"
+#include "Logger.h"
+#include "LogBNOData.h"
+#include "LogBMPData.h"
 
-class MagnetometerUpdate;
+class BNO100Update;
 class TestingTesting;
 
 class ArduinoUno
@@ -19,11 +22,11 @@ private:
 	//arduino sensors
 	Adafruit_BNO055 _bnoSensor;
 	Adafruit_BMP085_Unified _bmpSensor;
-	
+	Logger* _logger;
 
 	//event actions
-	MagnetometerUpdate* _magUpdate;
+	BNO100Update* _bnoUpdate;
 	AltitudeUpdate* _altUpdate;
-	TestingTesting* _tester;
-	
+	LogBNOData* _bnoLogger;
+	LogBMPData* _bmpLogger;
 };
